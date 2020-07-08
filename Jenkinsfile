@@ -56,12 +56,13 @@ pipeline{
         stage("Archive"){
             steps{
             nexusArtifactUploader artifacts: [[artifactId: 'www', classifier: '', file: 'www.tar.gz', type: 'tar.gz']], credentialsId: 'student10-jenkins', groupId: 'student10', nexusUrl: 'https://server2.jenkins-practice.tk/', nexusVersion: 'nexus3', protocol: 'http', repository: 'student10-repo', version: '${BASE_VERSION}-${BUILD_NUMBER}'            }
-                    }      
-        }   
+                    }         
         stage("Deploy"){
             steps{
                 build 'Deploy'
                 }       
             }
+
+    }
 }
 
