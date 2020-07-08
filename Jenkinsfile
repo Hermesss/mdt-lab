@@ -33,7 +33,7 @@ pipeline{
         }
         
         stage('Build'){
-            tools {nodejs "node12"}
+            tools {nodejs "Node12"}
             when{
                 branch 'master'
                } 
