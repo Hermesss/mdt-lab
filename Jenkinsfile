@@ -25,8 +25,8 @@ pipeline{
             sh "${scannerHome}/bin/sonar-scanner\
               -Dsonar.projectKey=student10-project \
               -Dsonar.sources=. \
-              -Dsonar.host.url=http://server1.jenkins-practice.tk:9000 \
-              -Dsonar.login=3dffccf3f42cfc67d1e33d664e1cfc8a6e30d5fc"
+              -Dsonar.host.url=http://server1.jenkins-practice.tk\
+              -Dsonar.login=17e23027080119a898a844bc516271378d3bf00e"
                  }
         timeout(time: 3, unit: 'MINUTES') {
             waitForQualityGate abortPipeline: true
