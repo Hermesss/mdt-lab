@@ -1,6 +1,9 @@
 pipeline{
     
-    agent { demo }
+    agent {
+        label 'docker'
+        }
+
     stages{
         stage('checkout'){
             steps{
@@ -58,9 +61,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 build 'Deploy'
-            }       
-                
-        
+                }       
             }
 }
 
