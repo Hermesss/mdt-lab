@@ -21,7 +21,7 @@ pipeline{
     
             steps {
             
-            withSonarQubeEnv('sonarqube') {
+            withSonarQubeEnv('sonarscanner4') {
             sh "${scannerHome}/bin/sonar-scanner\
               -Dsonar.projectKey=student10-project \
               -Dsonar.sources=. \
