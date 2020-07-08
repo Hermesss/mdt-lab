@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-                git 'https://github.com/Hermesss/mdt-lab.git'
+                git credentialsId: 'student10-github', url: 'https://github.com/Hermesss/mdt-lab.git'
             }
         }
         stage (' Test ') {
